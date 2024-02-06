@@ -6,12 +6,12 @@ public class General {
 	public String user_name;
 	public String user_password;
 	public String user_email;
-	public String user_role;
+	public user_role user_role;
 	
 	public General() {
 		
 	}
-	public General(String user_id, String user_name, String user_password, String user_email, String user_role) {
+	public General(String user_id, String user_name, String user_password, String user_email, user_role user_role) {
 		this.user_id = user_id;
 		this.user_name = user_name;
 		this.user_password = user_password;
@@ -34,7 +34,7 @@ public class General {
 		return user_email;
 	}
 	public String getGeneral_user_role() {
-		return user_role;
+		return user_role.name();
 	}
 	
 	// SET INFORMATION
@@ -48,7 +48,17 @@ public class General {
 	public void setGeneral_user_email(String user_email) {
 		this.user_email = user_email;
 	}
-	public void setGeneral_user_role(String user_role) {
+	public void setGeneral_user_role(user_role user_role) {
 		this.user_role = user_role;
 	}
+	
+	// ROLE 
+	public enum user_role{
+		General,
+		Salesperson,
+		Administrator,
+		Officer,
+	}
+	
+	// FUNCTION
 }
